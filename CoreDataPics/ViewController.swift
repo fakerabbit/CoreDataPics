@@ -9,6 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private lazy var mainView: View! = {
+        return View(frame: UIScreen.main.bounds)
+    }()
+    
+    override func loadView() {
+        super.loadView()
+        self.view = mainView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

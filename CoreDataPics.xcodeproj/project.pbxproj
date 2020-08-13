@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC12754324E5B0BC007B3882 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC12754224E5B0BC007B3882 /* View.swift */; };
 		ACBE6EB324E587DD00F0EB13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE6EB224E587DD00F0EB13 /* AppDelegate.swift */; };
 		ACBE6EB524E587DD00F0EB13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE6EB424E587DD00F0EB13 /* SceneDelegate.swift */; };
 		ACBE6EB724E587DD00F0EB13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE6EB624E587DD00F0EB13 /* ViewController.swift */; };
-		ACBE6EBA24E587DD00F0EB13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBE6EB824E587DD00F0EB13 /* Main.storyboard */; };
 		ACBE6EBD24E587DD00F0EB13 /* CoreDataPics.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACBE6EBB24E587DD00F0EB13 /* CoreDataPics.xcdatamodeld */; };
 		ACBE6EBF24E587DF00F0EB13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBE6EBE24E587DF00F0EB13 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC12754224E5B0BC007B3882 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		ACBE6EAF24E587DD00F0EB13 /* CoreDataPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBE6EB224E587DD00F0EB13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACBE6EB424E587DD00F0EB13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ACBE6EB624E587DD00F0EB13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ACBE6EB924E587DD00F0EB13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACBE6EBC24E587DD00F0EB13 /* CoreDataPics.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataPics.xcdatamodel; sourceTree = "<group>"; };
 		ACBE6EBE24E587DF00F0EB13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACBE6EC324E587DF00F0EB13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 				ACBE6EB224E587DD00F0EB13 /* AppDelegate.swift */,
 				ACBE6EB424E587DD00F0EB13 /* SceneDelegate.swift */,
 				ACBE6EB624E587DD00F0EB13 /* ViewController.swift */,
-				ACBE6EB824E587DD00F0EB13 /* Main.storyboard */,
+				AC12754224E5B0BC007B3882 /* View.swift */,
 				ACBE6EBE24E587DF00F0EB13 /* Assets.xcassets */,
 				ACBE6EC324E587DF00F0EB13 /* Info.plist */,
 				ACBE6EBB24E587DD00F0EB13 /* CoreDataPics.xcdatamodeld */,
@@ -126,7 +126,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACBE6EBF24E587DF00F0EB13 /* Assets.xcassets in Resources */,
-				ACBE6EBA24E587DD00F0EB13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,23 +138,13 @@
 			files = (
 				ACBE6EB724E587DD00F0EB13 /* ViewController.swift in Sources */,
 				ACBE6EB324E587DD00F0EB13 /* AppDelegate.swift in Sources */,
+				AC12754324E5B0BC007B3882 /* View.swift in Sources */,
 				ACBE6EB524E587DD00F0EB13 /* SceneDelegate.swift in Sources */,
 				ACBE6EBD24E587DD00F0EB13 /* CoreDataPics.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		ACBE6EB824E587DD00F0EB13 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACBE6EB924E587DD00F0EB13 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ACBE6EC424E587DF00F0EB13 /* Debug */ = {
