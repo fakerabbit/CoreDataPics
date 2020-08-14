@@ -19,17 +19,22 @@ struct NetworkAPI {
         let urlString = "https://pixabay.com/api/?key=\(accessToken)&per_page=200"
         let url = URL(string: urlString)!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data, let _ = String(data: data, encoding: .utf8) else {
-                return
-            }
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let hits = try decoder.decode(HitsModel.self, from: data)
-                completion(hits.hits)
-            } catch {
-                debugPrint("Error decoding photo model")
-                return
+            if let error = error {
+                debugPrint("error: \(error.localizedDescription)")
+                completion([])
+            } else {
+                guard let data = data, let _ = String(data: data, encoding: .utf8) else {
+                    return
+                }
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let hits = try decoder.decode(HitsModel.self, from: data)
+                    completion(hits.hits)
+                } catch {
+                    debugPrint("Error decoding photo model")
+                    return
+                }
             }
         }
         task.resume()
@@ -38,11 +43,15 @@ struct NetworkAPI {
     func downloadImage(_ imageUrl: String, completion: @escaping (UIImage) -> ()) {
         let url = URL(string: imageUrl)!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let image = UIImage(data: data!) else {
-              return
-            }
-            DispatchQueue.main.async {
-                completion(image)
+            if let _ = error {
+                return
+            } else {
+                guard let image = UIImage(data: data!) else {
+                  return
+                }
+                DispatchQueue.main.async {
+                    completion(image)
+                }
             }
         }
         task.resume()

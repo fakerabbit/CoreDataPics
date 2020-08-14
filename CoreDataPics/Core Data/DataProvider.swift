@@ -25,6 +25,9 @@ extension CoreDataAPI {
     }
     
     func storeNetworkImages(_ images: [PhotoModel], completion: @escaping () -> ()) {
+        if images.count > 0 {
+            self.deleteAllStoredPhotos()
+        }
         for image in images {
             let photo = EPhoto(context: self.managedObjectContext)
             photo.id = Int64(image.id)
@@ -50,6 +53,19 @@ extension CoreDataAPI {
             completion(images)
         } catch {
             completion(images)
+        }
+    }
+    
+    func deleteAllStoredPhotos() {
+        var results: [EPhoto] = []
+        do {
+            results = try self.managedObjectContext.fetch(EPhoto.createFetchRequest())
+            for photo in results {
+                self.persistentContainer.viewContext.delete(photo)
+            }
+            self.saveContext()
+        } catch {
+            debugPrint("An error occurred while deleting all stored photos")
         }
     }
 }

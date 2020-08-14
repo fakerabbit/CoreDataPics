@@ -16,7 +16,7 @@ class CoreDataAPI {
     
     // MARK:- Core Data Stack
     
-    private lazy var persistentContainer: NSPersistentContainer = {
+    lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "CoreDataPics")
         container.loadPersistentStores { storeDescription, error in
             if let error = error as NSError? {
