@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AC12754324E5B0BC007B3882 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC12754224E5B0BC007B3882 /* View.swift */; };
+		AC12754624E5B25E007B3882 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC12754524E5B25E007B3882 /* NetworkAPI.swift */; };
+		AC17919C24E6D6FB00481440 /* EPhoto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17919A24E6D6FB00481440 /* EPhoto+CoreDataClass.swift */; };
+		AC17919D24E6D6FB00481440 /* EPhoto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17919B24E6D6FB00481440 /* EPhoto+CoreDataProperties.swift */; };
+		AC2EEDA424E5B2C80048928C /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2EEDA324E5B2C80048928C /* DataModels.swift */; };
+		AC2EEDA624E5B4340048928C /* CoreDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2EEDA524E5B4340048928C /* CoreDataAPI.swift */; };
 		ACBE6EB324E587DD00F0EB13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE6EB224E587DD00F0EB13 /* AppDelegate.swift */; };
 		ACBE6EB524E587DD00F0EB13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE6EB424E587DD00F0EB13 /* SceneDelegate.swift */; };
 		ACBE6EB724E587DD00F0EB13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE6EB624E587DD00F0EB13 /* ViewController.swift */; };
@@ -17,6 +22,11 @@
 
 /* Begin PBXFileReference section */
 		AC12754224E5B0BC007B3882 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		AC12754524E5B25E007B3882 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		AC17919A24E6D6FB00481440 /* EPhoto+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EPhoto+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC17919B24E6D6FB00481440 /* EPhoto+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EPhoto+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC2EEDA324E5B2C80048928C /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		AC2EEDA524E5B4340048928C /* CoreDataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAPI.swift; sourceTree = "<group>"; };
 		ACBE6EAF24E587DD00F0EB13 /* CoreDataPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBE6EB224E587DD00F0EB13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACBE6EB424E587DD00F0EB13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +47,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC12754424E5B246007B3882 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AC12754524E5B25E007B3882 /* NetworkAPI.swift */,
+				AC2EEDA324E5B2C80048928C /* DataModels.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AC2EEDA724E5B44A0048928C /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				AC17919A24E6D6FB00481440 /* EPhoto+CoreDataClass.swift */,
+				AC17919B24E6D6FB00481440 /* EPhoto+CoreDataProperties.swift */,
+				ACBE6EBB24E587DD00F0EB13 /* CoreDataPics.xcdatamodeld */,
+				AC2EEDA524E5B4340048928C /* CoreDataAPI.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		ACBE6EA624E587DD00F0EB13 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +86,14 @@
 		ACBE6EB124E587DD00F0EB13 /* CoreDataPics */ = {
 			isa = PBXGroup;
 			children = (
+				AC2EEDA724E5B44A0048928C /* Core Data */,
+				AC12754424E5B246007B3882 /* Network */,
 				ACBE6EB224E587DD00F0EB13 /* AppDelegate.swift */,
 				ACBE6EB424E587DD00F0EB13 /* SceneDelegate.swift */,
 				ACBE6EB624E587DD00F0EB13 /* ViewController.swift */,
 				AC12754224E5B0BC007B3882 /* View.swift */,
 				ACBE6EBE24E587DF00F0EB13 /* Assets.xcassets */,
 				ACBE6EC324E587DF00F0EB13 /* Info.plist */,
-				ACBE6EBB24E587DD00F0EB13 /* CoreDataPics.xcdatamodeld */,
 			);
 			path = CoreDataPics;
 			sourceTree = "<group>";
@@ -137,10 +168,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACBE6EB724E587DD00F0EB13 /* ViewController.swift in Sources */,
+				AC2EEDA624E5B4340048928C /* CoreDataAPI.swift in Sources */,
 				ACBE6EB324E587DD00F0EB13 /* AppDelegate.swift in Sources */,
 				AC12754324E5B0BC007B3882 /* View.swift in Sources */,
+				AC17919D24E6D6FB00481440 /* EPhoto+CoreDataProperties.swift in Sources */,
 				ACBE6EB524E587DD00F0EB13 /* SceneDelegate.swift in Sources */,
+				AC17919C24E6D6FB00481440 /* EPhoto+CoreDataClass.swift in Sources */,
+				AC2EEDA424E5B2C80048928C /* DataModels.swift in Sources */,
 				ACBE6EBD24E587DD00F0EB13 /* CoreDataPics.xcdatamodeld in Sources */,
+				AC12754624E5B25E007B3882 /* NetworkAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
