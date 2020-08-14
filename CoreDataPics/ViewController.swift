@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     private lazy var mainView: View! = {
-        return View(frame: UIScreen.main.bounds)
+        let view = View(frame: UIScreen.main.bounds)
+        view.delegate = self
+        return view
     }()
     
     override func loadView() {
@@ -22,8 +24,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "CoreData Pics"
+        CoreDataAPI.shared.fetchImages() { images in
+            self.mainView.dataProvider = images
+        }
     }
+}
 
-
+extension ViewController {
+    
+    func imageSelected(_ model: PhotoModel?) {
+        if let photoModel = model {
+            let imageController = ImageViewController(model: photoModel)
+            self.navigationController?.pushViewController(imageController, animated: true)
+        }
+    }
 }
 

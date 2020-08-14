@@ -26,9 +26,7 @@ struct NetworkAPI {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let hits = try decoder.decode(HitsModel.self, from: data)
-                DispatchQueue.main.async {
-                    completion(hits.hits)
-                }
+                completion(hits.hits)
             } catch {
                 debugPrint("Error decoding photo model")
                 return

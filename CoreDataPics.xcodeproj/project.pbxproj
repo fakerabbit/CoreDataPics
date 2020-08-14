@@ -11,6 +11,10 @@
 		AC12754624E5B25E007B3882 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC12754524E5B25E007B3882 /* NetworkAPI.swift */; };
 		AC17919C24E6D6FB00481440 /* EPhoto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17919A24E6D6FB00481440 /* EPhoto+CoreDataClass.swift */; };
 		AC17919D24E6D6FB00481440 /* EPhoto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17919B24E6D6FB00481440 /* EPhoto+CoreDataProperties.swift */; };
+		AC17919F24E6DF7100481440 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17919E24E6DF7100481440 /* DataProvider.swift */; };
+		AC1791A124E6F35600481440 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1791A024E6F35600481440 /* Cell.swift */; };
+		AC1791A424E7000100481440 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1791A324E7000100481440 /* ImageView.swift */; };
+		AC1791A624E7002800481440 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1791A524E7002800481440 /* ImageViewController.swift */; };
 		AC2EEDA424E5B2C80048928C /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2EEDA324E5B2C80048928C /* DataModels.swift */; };
 		AC2EEDA624E5B4340048928C /* CoreDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2EEDA524E5B4340048928C /* CoreDataAPI.swift */; };
 		ACBE6EB324E587DD00F0EB13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBE6EB224E587DD00F0EB13 /* AppDelegate.swift */; };
@@ -25,6 +29,10 @@
 		AC12754524E5B25E007B3882 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
 		AC17919A24E6D6FB00481440 /* EPhoto+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EPhoto+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AC17919B24E6D6FB00481440 /* EPhoto+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EPhoto+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC17919E24E6DF7100481440 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		AC1791A024E6F35600481440 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		AC1791A324E7000100481440 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		AC1791A524E7002800481440 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		AC2EEDA324E5B2C80048928C /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		AC2EEDA524E5B4340048928C /* CoreDataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAPI.swift; sourceTree = "<group>"; };
 		ACBE6EAF24E587DD00F0EB13 /* CoreDataPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +64,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		AC1791A224E6FFBE00481440 /* Image Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				AC1791A324E7000100481440 /* ImageView.swift */,
+				AC1791A524E7002800481440 /* ImageViewController.swift */,
+			);
+			path = "Image Viewer";
+			sourceTree = "<group>";
+		};
 		AC2EEDA724E5B44A0048928C /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +80,7 @@
 				AC17919B24E6D6FB00481440 /* EPhoto+CoreDataProperties.swift */,
 				ACBE6EBB24E587DD00F0EB13 /* CoreDataPics.xcdatamodeld */,
 				AC2EEDA524E5B4340048928C /* CoreDataAPI.swift */,
+				AC17919E24E6DF7100481440 /* DataProvider.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -86,12 +104,14 @@
 		ACBE6EB124E587DD00F0EB13 /* CoreDataPics */ = {
 			isa = PBXGroup;
 			children = (
+				AC1791A224E6FFBE00481440 /* Image Viewer */,
 				AC2EEDA724E5B44A0048928C /* Core Data */,
 				AC12754424E5B246007B3882 /* Network */,
 				ACBE6EB224E587DD00F0EB13 /* AppDelegate.swift */,
 				ACBE6EB424E587DD00F0EB13 /* SceneDelegate.swift */,
 				ACBE6EB624E587DD00F0EB13 /* ViewController.swift */,
 				AC12754224E5B0BC007B3882 /* View.swift */,
+				AC1791A024E6F35600481440 /* Cell.swift */,
 				ACBE6EBE24E587DF00F0EB13 /* Assets.xcassets */,
 				ACBE6EC324E587DF00F0EB13 /* Info.plist */,
 			);
@@ -171,9 +191,13 @@
 				AC2EEDA624E5B4340048928C /* CoreDataAPI.swift in Sources */,
 				ACBE6EB324E587DD00F0EB13 /* AppDelegate.swift in Sources */,
 				AC12754324E5B0BC007B3882 /* View.swift in Sources */,
+				AC1791A424E7000100481440 /* ImageView.swift in Sources */,
 				AC17919D24E6D6FB00481440 /* EPhoto+CoreDataProperties.swift in Sources */,
+				AC1791A124E6F35600481440 /* Cell.swift in Sources */,
+				AC17919F24E6DF7100481440 /* DataProvider.swift in Sources */,
 				ACBE6EB524E587DD00F0EB13 /* SceneDelegate.swift in Sources */,
 				AC17919C24E6D6FB00481440 /* EPhoto+CoreDataClass.swift in Sources */,
+				AC1791A624E7002800481440 /* ImageViewController.swift in Sources */,
 				AC2EEDA424E5B2C80048928C /* DataModels.swift in Sources */,
 				ACBE6EBD24E587DD00F0EB13 /* CoreDataPics.xcdatamodeld in Sources */,
 				AC12754624E5B25E007B3882 /* NetworkAPI.swift in Sources */,

@@ -17,11 +17,11 @@ extension EPhoto {
         return NSFetchRequest<EPhoto>(entityName: "Photo")
     }
 
-    @NSManaged public var downloads: Int16
-    @NSManaged public var favorites: Int16
-    @NSManaged public var id: Int16
+    @NSManaged public var downloads: Int64
+    @NSManaged public var favorites: Int64
+    @NSManaged public var id: Int64
     @NSManaged public var largeImageURL: String
-    @NSManaged public var likes: Int16
+    @NSManaged public var likes: Int64
     @NSManaged public var previewURL: String
 
 }

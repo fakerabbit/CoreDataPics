@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-struct CoreDataAPI {
+class CoreDataAPI {
     
     static let shared = CoreDataAPI()
     
@@ -26,11 +26,11 @@ struct CoreDataAPI {
         return container
     }()
     
-    private lazy var managedObjectContext: NSManagedObjectContext = {
+    lazy var managedObjectContext: NSManagedObjectContext = {
         return self.persistentContainer.viewContext
     }()
     
-    mutating private func saveContext () {
+    func saveContext () {
         if persistentContainer.viewContext.hasChanges {
             do {
                 try persistentContainer.viewContext.save()
@@ -40,9 +40,5 @@ struct CoreDataAPI {
             }
         }
     }
-}
-
-extension CoreDataAPI {
-    
 }
 
